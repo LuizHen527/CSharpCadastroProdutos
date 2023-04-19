@@ -10,7 +10,6 @@
 
 // CADASTRO
 
-
 // Criar metodo CadastroProduto(string[] nome, float[] preco, bool[] promocao)
 
 // - Peguntar o nome, preco e se ta em promo
@@ -27,9 +26,12 @@
 //VARIAVEIS
 
 bool fecharProg = false;
+
 string[] nome = new string[5];
 double[] preco = new double[5];
 bool[] promocao = new bool[5];
+
+int numeroDeCadastros = 0;
 
 //METODOS
 
@@ -43,59 +45,84 @@ static int CadastroProduto(string[] nome, double[] preco, bool[] promocao)
     {
         Console.WriteLine($"Insira o nome do produto:");
         nome[i] = Console.ReadLine();
-        
+        Console.WriteLine("");
+
         Console.WriteLine($"Insira o preco do produto:");
-        preco[i] = double.Parse(Console.ReadLine());
-        
-        Console.WriteLine($"Este produto esta em promocao? (Digite 'S' para sim ou 'N' para nao)");
-        promoOpcao = Console.ReadLine();
+        preco[i] = double.Parse(Console.ReadLine().ToUpper());
+        Console.WriteLine("");
 
         do
         {
-            switch (promoOpcao)
-        {
-            case "S":
-            promocao[i] = true;
-            break;
+            Console.WriteLine($"Este produto esta em promocao? (Digite 'S' para sim ou 'N' para nao)");
+            promoOpcao = Console.ReadLine().ToUpper();
+            Console.WriteLine("");
 
-            case "N":
-            promocao[i] = false;
-            pergunta = true;
-            break;
-            default:
-            Console.WriteLine($"Opcao invalida");
-            break;
-        }
+            switch (promoOpcao)
+            {
+                case "S":
+                    promocao[i] = true;
+                    pergunta = true;
+                    break;
+
+                case "N":
+                    promocao[i] = false;
+                    pergunta = true;
+                    break;
+                default:
+                    Console.WriteLine($"Opcao invalida");
+                    break;
+            }
         } while (pergunta == false);
 
-        Console.WriteLine($"Gostaria de cadastrar outro produto? (Digite 'S' para sim ou 'N' para nao) (Espacos livres {5 - i})");
-        string maisUmProduto = Console.ReadLine().ToUpper();
+        pergunta = false;
 
         i = i + 1;
 
-        do
+        if (i < 5)
         {
-            switch (maisUmProduto)
-        {
-            case "S":
-            pergunta = true;
-            break;
+            do
+            {
+                Console.WriteLine($"Gostaria de cadastrar outro produto? (Digite 'S' para sim ou 'N' para nao) (Espacos livres {5 - i})");
+                string maisUmProduto = Console.ReadLine().ToUpper();
+                Console.WriteLine("");
 
-            case "N":
-            maisUm = true;
-            pergunta = true;
-            break;
-            default:
-            Console.WriteLine($"Opcao invalida");
-            break;
+                switch (maisUmProduto)
+                {
+                    case "S":
+                        pergunta = true;
+                        break;
+
+                    case "N":
+                        maisUm = true;
+                        pergunta = true;
+                        break;
+                    default:
+                        Console.WriteLine($"Opcao invalida");
+                        break;
+                }
+            } while (pergunta == false);
         }
-        } while (pergunta == false);
+
+        else
+        {
+            maisUm = true;
+        }
         
-        
-    } while ((maisUm == false) && (i < 2));
+
+        pergunta = false;
+
+    } while ((maisUm == false) && (i < 5));
+
+    if (5 == i)
+    {
+        Console.WriteLine($"Numero maximo de produtos cadastrados (5 produtos). Voce pode refaze-los, cadastrando novamente.");
+        Console.WriteLine("");
+    }
 
     return i;
 }
+
+// CODIGO
 
 Console.WriteLine($"Bem-vindo ao Cadastrador de Produtos do mercado SENAI");
 
@@ -106,29 +133,52 @@ do
         '2' para Listar os prodrutos cadastrados
         '0' para Desligar o Cadastrador de Produtos");
     Console.WriteLine($"");
-    
+
 
     string opcao = Console.ReadLine();
-    
+    Console.WriteLine("");
+
     switch (opcao)
     {
         case "1":
-        CadastroProduto(nome, preco, promocao);
-        break;
+            numeroDeCadastros = CadastroProduto(nome, preco, promocao);
+            break;
 
         case "2":
-        Console.WriteLine($"Listar");
-        break;
+            
+            for(int i = 0; i <= (numeroDeCadastros - 1); i++)
+            {
+
+                Console.WriteLine($"Produto numero {i + 1}");
+
+                Console.WriteLine("");
+
+                Console.WriteLine($@"Nome: {nome[i]}");
+
+                Console.WriteLine($@"Preço: R$ {preco[i]}");
+
+                if (promocao[i] == true)
+                {
+                    Console.WriteLine("Este produto esta em promoção");
+                }
+                else
+                {
+                    Console.WriteLine("Este produto NÃO esta em promoção");
+                }
+
+                Console.WriteLine("");
+            }
+            break;
 
         case "0":
-        Console.WriteLine($"");
-        Console.WriteLine($"O programa encerrou");
-        fecharProg = true;
-        break;
+            Console.WriteLine($"");
+            Console.WriteLine($"O programa encerrou");
+            fecharProg = true;
+            break;
 
         default:
-        Console.WriteLine($"Digite uma opcao valida");
-        break;
+            Console.WriteLine($"Digite uma opcao valida");
+            break;
     }
-    
+
 } while (fecharProg == false);
