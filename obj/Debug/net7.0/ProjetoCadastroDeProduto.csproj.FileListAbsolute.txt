@@ -1,0 +1,15 @@
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\bin\Debug\net7.0\ProjetoCadastroDeProduto.exe
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\bin\Debug\net7.0\ProjetoCadastroDeProduto.deps.json
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\bin\Debug\net7.0\ProjetoCadastroDeProduto.runtimeconfig.json
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\bin\Debug\net7.0\ProjetoCadastroDeProduto.dll
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\bin\Debug\net7.0\ProjetoCadastroDeProduto.pdb
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\obj\Debug\net7.0\ProjetoCadastroDeProduto.csproj.AssemblyReference.cache
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\obj\Debug\net7.0\ProjetoCadastroDeProduto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\obj\Debug\net7.0\ProjetoCadastroDeProduto.AssemblyInfoInputs.cache
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\obj\Debug\net7.0\ProjetoCadastroDeProduto.AssemblyInfo.cs
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\obj\Debug\net7.0\ProjetoCadastroDeProduto.csproj.CoreCompileInputs.cache
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\obj\Debug\net7.0\ProjetoCadastroDeProduto.dll
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\obj\Debug\net7.0\refint\ProjetoCadastroDeProduto.dll
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\obj\Debug\net7.0\ProjetoCadastroDeProduto.pdb
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\obj\Debug\net7.0\ProjetoCadastroDeProduto.genruntimeconfig.cache
+C:\Users\38606125814\Desktop\back-end\ProjetoCadastroDeProduto\obj\Debug\net7.0\ref\ProjetoCadastroDeProduto.dll
